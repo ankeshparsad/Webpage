@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>MUSTACHE</title>
+<style type="text/css">
+#mustache
+{
+color: black;
+width: 180px;
+height: 180px;
+border-radius: 50%;
+box-shadow: 150px 240px 0 0 currentcolor,
+300px 240px 0 0 currentcolor;
+position: absolute;
+left: 340px;
+}
+#mustache::before
+{
+content: "";
+height: 120px;
+width: 210px;
+display: block;
+border-bottom: 180px solid currentcolor;
+border-radius: 0 0 0 100%;
+position: absolute;
+top: 120px;
+left: 30px;
+transform: rotate(-40deg);
+transform-origin: right 210px;
+animation: shakeleft 1s ease-in-out infinite; 
+}
+#mustache::after
+{
+content: "";
+height: 120px;
+width: 210px;
+display: block;
+border-bottom: 180px solid currentcolor;
+border-radius: 0 0 100% 0;
+position: absolute;
+top: 120px;
+left: 390px;
+transform: rotate(40deg);
+transform-origin: left 210px;
+animation: shakeright 1s ease-in-out infinite; 
+
+}
+@keyframes shakeleft{
+0%{
+	transform:rotate(-50deg);
+}
+50%{
+	transform:rotate(-30deg);
+}
+100%{
+	transform:rotate(-50deg);
+}
+}
+@keyframes shakeright{
+0%{
+	transform:rotate(50deg);
+}
+50%{
+	transform:rotate(30deg);
+}
+100%{
+	transform:rotate(50deg);
+}
+}
+</style>
+</head>
+<body bgcolor="red">
+	<div id="mustache"></div>
+	<marquee height="30%"width="100%"align="center"direction="right"loop="20"behaviour="alternate"scrolldealy="20"bgcolor="green">
+	<h1 align="center">ONLY FOR YESHVI</h1>
+</marquee>
+</body>
+</html>
